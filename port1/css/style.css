@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Silkscreen', cursive;
+    background-color: #505A64;
+    overflow: hidden;
+}
+
+#strip {
+    position: absolute;
+    width: 33px;
+    height: 100vh;
+    right: 178px;
+    top: 78px;
+    background-color: #fab005;
+    opacity: .9;
+    z-index: 1;
+}
+
+.skills-wrapper {
+    margin-top: 100px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skill-title-banner {
+    display: flex;
+    /* justify-content: center; */
+    align-self: start;
+    width: 321px;
+    /* height: 38px; */
+    color: white;
+    /* padding-right: 5px; */
+    
+    background: #868E96;
+    border: 1px solid #FFFFFF;
+    z-index: -1;
+}
+
+.skill-banner {
+    display: flex;
+    align-self: end;
+    width: 321px;
+    /* height: 118px; */
+
+    background: #868E96;
+    border: 1px solid #FFFFFF;
+    z-index: 2;
+    /* opacity: .9; */
+}
+
+@media (min-width: 400px) {
+    .skill-title-banner{
+        align-self: end;
+
+    }
+    #strip {
+        right: 140px;
+        top: 380px;
+    }
+    .skills-wrapper {
+        justify-content: center;
+    }
+
+
+}
+
