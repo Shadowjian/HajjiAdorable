@@ -17,7 +17,7 @@ body {
     width: 33px;
     height: 100vh;
     right: 178px;
-    top: 78px;
+    /* top: 78px; */
     background-color: #fab005;
     opacity: .9;
     z-index: 1;
@@ -65,11 +65,11 @@ body {
     }
     #strip {
         right: 140px;
-        top: 380px;
+        /* top: 380px; */
     }
-    .skills-wrapper {
+    /* .skills-wrapper {
         justify-content: center;
-    }
+    } */
 
 
 }
