@@ -1,0 +1,35 @@
+[33mcommit fb4eb9df7680e4e03b67721fcee7e7d43936bb78[m[33m ([m[1;36mHEAD -> [m[1;32mskills[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Shadowjian <karakalel.adorable@gmail.com>
+Date:   Thu Oct 20 23:28:11 2022 +0800
+
+    created 'skills' branch
+
+[33mcommit c547deff5d78907e73426636ec4e48f59f3cc35b[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Shadowjian <karakalel.adorable@gmail.com>
+Date:   Thu Oct 20 12:08:05 2022 +0800
+
+    still fixing horizontal bar
+
+[33mcommit fb80850cefec1efaa9d46a4060d47232703ea876[m
+Author: Shadowjian <karakalel.adorable@gmail.com>
+Date:   Thu Oct 20 11:53:27 2022 +0800
+
+    added overflow-x
+
+[33mcommit 4909d0e53b1f1c08ad5d7739268a1934337764db[m
+Author: Shadowjian <karakalel.adorable@gmail.com>
+Date:   Thu Oct 20 11:42:00 2022 +0800
+
+    modified the strip's height
+
+[33mcommit 36806b11ceb5da520416b56135dffa9065d6b2d1[m
+Author: Shadowjian <karakalel.adorable@gmail.com>
+Date:   Thu Oct 20 11:26:20 2022 +0800
+
+    removed sandbox
+
+[33mcommit 6e307de2c26f60fbd2086313792f360748f973f2[m
+Author: Shadowjian <karakalel.adorable@gmail.com>
+Date:   Thu Oct 20 11:22:14 2022 +0800
+
+    port draft

@@ -81,12 +81,13 @@ body {
 
     }
     #strip {
-        right: 140px;
+        display: none;
+        /* right: 140px; */
         /* top: 380px; */
     }
-    /* .skills-wrapper {
-        justify-content: center;
-    } */
+    .skills-wrapper {
+        display: none;
+    }
 
 
 }
