@@ -114,7 +114,7 @@ body {
 
     }
     #strip {
-        display: none;
+        /* display: none; */
         /* right: 140px; */
         /* top: 380px; */
     }
@@ -128,7 +128,7 @@ body {
     display: flex;
     position: fixed;
     top: 0;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 40px;
     width: 100%;
@@ -137,9 +137,13 @@ body {
     z-index: 100;
 }
 
+.navbar #hajji {
+    padding-left: 20px;
+}
+
 .navbar ul {
     display: flex;
-    width: 500px;
+    width: 300px;
     justify-content: space-around;
 }
 
