@@ -9,7 +9,7 @@
 body {
     font-family: 'Silkscreen', cursive;
     background-color: #505A64;
-    overflow: hidden;
+    overflow-x: auto;
 }
 
 #strip {
@@ -23,10 +23,15 @@ body {
     z-index: 1;
 }
 
+#tech-skills {
+    justify-content: center;
+    color: white;
+}
+
 .skills-wrapper {
     margin-top: 100px;
     height: 100vh;
-    width: 100vw;
+    /* max-width: 300px; */
     display: flex;
     flex-direction: column;
     gap: 30px;
