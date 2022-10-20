@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 body {
@@ -13,6 +15,8 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
+
+
 
 #strip {
     position: absolute;
@@ -55,6 +59,7 @@ body {
 
 .skill-banner {
     display: flex;
+    justify-content: space-around;
     align-self: end;
     width: 321px;
     /* height: 118px; */
@@ -63,6 +68,11 @@ body {
     border: 1px solid #FFFFFF;
     z-index: 2;
     /* opacity: .9; */
+}
+
+.project {
+    justify-content: end;
+    color: white;
 }
 
 @media (min-width: 400px) {
@@ -80,4 +90,3 @@ body {
 
 
 }
-
