@@ -16,34 +16,92 @@
 }
 
 
-
 body {
+    font-size: 14px;
     font-family: 'Silkscreen', cursive;
     background-color: var(--bg-primary);
-    height: 100vh;
-    width: 100vw;
     overflow-x: hidden;
 }
 
+.nav-container {
+    display: flex;
+    width: 100%;
+}
 
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    height: 40px;
+    background-color: var(--bg-primary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    /* border: solid 5px white; */
+}
+
+#hajji {
+    padding-left: 20px;
+    flex:1;
+}
+
+#nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.navbar li, .navbar a {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between  ;
+    /* width: 100vw; */
+}
+
+#showcase {
+    text-align: center;
+    background-color: var(--highlight);
+    opacity: 0.5;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* max-width: 50%; */
+    min-width: 50%;
+    z-index: -1;
+    /* border: solid 5px green; */
+}
+
+#me {
+    position: relative;
+    top: 5px;
+    font-size: 2em;
+}
 
 #strip {
     position: absolute;
     width: 33px;
-    height: 200vh;
+    height: 300vh;
     left: calc(100vw / 2 - 33px / 2);
-    /* top: 0; */
+    top: 0;
     background-color: #fab005;
     opacity: .9;
     z-index: 1;
 }
 
-#about-me {
-    align-self: center;
-    z-index: 1;
-}
 
-#about, #tech-skills, #projects {
+.header-banner {
+    display: flex;
+    justify-content: center;
+    align-self: start;
+    padding: 10px;
+    
+    border-top: 1px solid var(--bg-secondary);
     position: sticky;
     justify-content: center;
     background-color: var(--bg-primary);
@@ -52,27 +110,39 @@ body {
     color: var(--highlight);
 }
 
+
+
 #about {
-    z-index: 7;
+    z-index: 5;
     top: 40px;
+}
+
+#about-me {
+    align-self: center;
+    z-index: 1;
 }
 
 #tech-skills {
     z-index: 6;
-    top: 80px;
+    top: 40px;
 }
 
 #projects {
-    top: 120px;
-    z-index: 5;
+    top: 40px;
+    z-index: 7;
+}
+
+#contacts {
+    align-self: center;
+    top: 40px;
+    z-index: 8;
 }
 
 .skills-wrapper {
+    float: right;
     /* border: solid 2px white; */
-    justify-content: end;
     margin-top: 80px;
-    /* height: 200vh; */
-    min-width: 400px;
+    height: 200vh;
     max-width: 700px;
     display: flex;
     flex-direction: column;
@@ -89,7 +159,7 @@ body {
     padding: 10px;
     
     background: var(--bg-secondary);
-    /* border: 1px solid #FFFFFF; */
+    border-right: 1px solid var(--highlight);
     z-index: -1;
 }
 
@@ -100,7 +170,7 @@ body {
     width: 80%;
     padding: 10px;
     background: #868E96;
-    /* border: 1px solid #FFFFFF; */
+    border-left: 1px solid var(--highlight);
     z-index: 2;
     /* opacity: .9; */
 }
@@ -112,59 +182,17 @@ body {
     text-align: center;
 }
 
-.container {
-    display: flex;
-    justify-content: end;
-}
-
-@media (min-width: 500px) {
-    .skill-title-banner{
-        align-self: end;
-
-    }
-    /* #strip {
+@media (max-width: 700px) {
+    #showcase {
         display: none;
-        right: 140px;
-        top: 380px;
-    } */
-
-    #about-me {
-        align-self: end;
     }
-
-  .header-banner {
-    width: 80% !important;
-    justify-content: start !important;
-    /* justify-content: end !important; */
-  }
-
+  
 }
 
-.navbar {
-    display: flex;
-    position: fixed;
-    top: 0;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    width: 100%;
-    background-color: var(--bg-primary);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 100;
-}
-
-.navbar #hajji {
-    padding-left: 20px;
-}
-
-.navbar ul {
-    display: flex;
-    width: 300px;
-    justify-content: space-around;
-}
-
-.navbar li, .navbar a {
-    color: white;
+@media (min-width: 700px) {
+    #strip {
+        display: none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -172,5 +200,62 @@ body {
     #nav-links {
         display: none;
     }
+
+
   
 }
+
+
+@media (min-width: 500px) {
+    .nav-container {
+        justify-content: end;
+    }
+  
+    .navbar {
+        /* max-width: 50%; */
+        justify-content: end;
+        /* background-color: none; */
+        box-shadow: none;
+    }
+
+    #hajji{
+        display: none;
+    }
+
+
+    #nav-links {
+        align-items: center;
+        background-color: var(--bg-primary);
+        box-shadow: var(--shadow);
+        height: 100%;
+        /* background-color: red; */
+        justify-content: space-around;
+    }
+
+ 
+    #skill-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill-title-banner{
+        align-self: center;
+    }
+    .skill-banner {
+        align-self: center;
+    }
+    
+  
+    /* #about-me {
+        align-self: end;
+    } */
+
+  .header-banner {
+    width: 80%;
+    align-self: center;
+
+    /* justify-content: end !important; */
+  }
+
+}
+
