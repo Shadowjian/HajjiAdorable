@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
+/* ============ 
+     RESETS
+ ===============*/
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -26,21 +30,70 @@ img {
     width: 100%;
 }
 
-.content-banner :is(a, button) {
-    cursor: pointer;
-    color: rgb(190, 195, 236);
+#strip {
+    position: absolute;
+    width: 33px;
+    height: 300vh;
+    left: calc(100vw / 2 - 33px / 2);
+    top: 0;
+    background-color: #fab005;
+    opacity: .9;
+    z-index: 1;
 }
 
-.content-banner :is(a, button):hover {
-    color: var(--highlight);
-}
+/* ==================
+     LAYOUT START
+ ===================*/
 
-.nav-container {
+ /* NAVIGATION */
+ .nav-container {
     display: flex;
     width: 100%;
 }
 
-.navbar {
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    justify-content: space-between  ;
+}
+
+/* LEFT SECTION */
+#showcase {
+    gap: 20px;
+    text-align: center;
+    background-color: var(--highlight);
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-width: 50%;
+}
+
+/* RIGHT SECTION */
+.skills-wrapper {
+    float: right;
+    margin-top: 80px;
+    height: 200vh;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ==================
+     LAYOUT END
+ ===================*/
+ 
+ 
+ /* ====================================
+      LEFT SECTION/SHOWCASE COMPONENTS
+  =======================================*/
+
+/* NAVBAR COMPONENTS START*/
+ .navbar {
     display: flex;
     position: fixed;
     width: 100%;
@@ -64,25 +117,16 @@ img {
 
 .navbar li, .navbar a {
     color: white;
-}
 
-.main-container {
-    display: flex;
-    justify-content: space-between  ;
 }
+/* NAVBAR COMPONENTS END*/
 
-#showcase {
-    gap: 20px;
-    text-align: center;
-    background-color: var(--highlight);
-    opacity: 0.5;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    min-width: 50%;
+
+/* LEFT SECTION/SHOWCASE COMPONENTS START*/
+#me {
+    position: relative;
+    top: 5px;
+    font-size: 2em;
 }
 
 #showcase h4 {
@@ -96,20 +140,12 @@ img {
     font-size: large;
 }   
 
-#copy {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    font-size: xx-small;
-}
-
 .stacks {
     position: absolute;
     left: 40px;
-    font-size: 50px;
+    font-size: 2.5rem;
     opacity: .5;
     align-self: start;
-    
 }
 
 .stacks ul {
@@ -118,10 +154,11 @@ img {
     gap: 20px;
 }
 
-.stacks li {
+/* .stacks li {
     color: rgb(147, 132, 18);
-}
+} */
 
+/* ANIMATE STACK ICONS */
 .stacks li:nth-of-type(odd){
     color: red;
     animation-name: animate-stacks;
@@ -129,6 +166,7 @@ img {
     animation-iteration-count: infinite ;
     animation-direction:alternate-reverse;
 }
+
 .stacks li:nth-of-type(even){
     color: red;
     animation-name: animate-stacks;
@@ -147,23 +185,20 @@ img {
         transform: rotate(30deg);
     }
 }
+/* ANIMATE STACK ICONS */
 
-#me {
-    position: relative;
-    top: 5px;
-    font-size: 2em;
-}
-
-#strip {
+#copy {
     position: absolute;
-    width: 33px;
-    height: 300vh;
-    left: calc(100vw / 2 - 33px / 2);
-    top: 0;
-    background-color: #fab005;
-    opacity: .9;
-    z-index: 1;
+    bottom: 10px;
+    right: 20px;
+    font-size: xx-small;
 }
+/* SHOWCASE COMPONENTS END*/
+
+
+ /* ====================================
+      RIGHT SECTION/SKILLS COMPONENTS START
+  =======================================*/
 
 .header-banner {
     display: flex;
@@ -177,6 +212,37 @@ img {
     background-color: var(--bg-primary);
     box-shadow: var(--shadow);
     width: 100%;
+    color: var(--highlight);
+}
+
+.title-banner {
+    display: flex;
+    align-self: start;
+    width: 80%;
+    color: white;
+    padding: 10px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--highlight);
+    z-index: -1;
+}
+
+.content-banner {
+    display: flex;
+    justify-content: space-around;
+    align-self: end;
+    width: 80%;
+    padding: 10px;
+    background: #868E96;
+    border-left: 1px solid var(--highlight);
+    z-index: 2;
+}
+
+.content-banner :is(a, button) {
+    cursor: pointer;
+    color: rgb(190, 195, 236);
+}
+
+.content-banner :is(a, button):hover {
     color: var(--highlight);
 }
 
@@ -235,40 +301,6 @@ img {
     box-shadow: var(--shadow);
 }
 
-.skills-wrapper {
-    float: right;
-    margin-top: 80px;
-    height: 200vh;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.title-banner {
-    display: flex;
-    align-self: start;
-    width: 80%;
-    color: white;
-    padding: 10px;
-    background: var(--bg-secondary);
-    border-right: 1px solid var(--highlight);
-    z-index: -1;
-}
-
-.content-banner {
-    display: flex;
-    justify-content: space-around;
-    align-self: end;
-    width: 80%;
-    padding: 10px;
-    background: #868E96;
-    border-left: 1px solid var(--highlight);
-    z-index: 2;
-}
-
-
-
 #project-link {
     margin-top: 5px;
     text-align: center;
@@ -280,6 +312,7 @@ img {
     font-size: x-large;
 }
 
+/* MEDIA QUERIES START */
 
 @media (max-width: 700px) {
     #showcase {
@@ -295,7 +328,7 @@ img {
 }
 
 @media (max-width: 500px) {
-  
+    
     #nav-links {
         display: none;
     }
@@ -310,7 +343,7 @@ img {
         justify-content: end;
         box-shadow: none;
     }
-
+    
     #hajji{
         display: none;
     }
@@ -325,7 +358,7 @@ img {
         justify-content: center;
         align-items: center;
     }
-
+    
     .title-banner{
         align-self: center;
     }
@@ -336,6 +369,12 @@ img {
         width: 80%;
         align-self: center;
     }
-
+    
 }
+/* MEDIA QUERIES END */
+
+/* ====================================
+      RIGHT SECTION/SKILLS COMPONENTS END
+  =======================================*/
+
 
