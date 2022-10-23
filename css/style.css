@@ -22,9 +22,13 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    width: 100%;
+}
+
 .content-banner :is(a, button) {
     cursor: pointer;
-    color: white;
+    color: rgb(190, 195, 236);
 }
 
 .content-banner :is(a, button):hover {
@@ -228,6 +232,7 @@ body {
 
 #contact-me form button {
     background-color: var(--bg-primary);
+    box-shadow: var(--shadow);
 }
 
 .skills-wrapper {
