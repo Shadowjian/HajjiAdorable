@@ -205,7 +205,6 @@ img {
     justify-content: center;
     align-self: start;
     padding: 10px;
-    
     border-top: 1px solid var(--bg-secondary);
     position: sticky;
     justify-content: center;
@@ -239,7 +238,7 @@ img {
 
 .content-banner :is(a, button) {
     cursor: pointer;
-    color: rgb(190, 195, 236);
+    color: rgb(185, 201, 245);
 }
 
 .content-banner :is(a, button):hover {
@@ -261,7 +260,7 @@ img {
     top: 40px;
 }
 
-#projects {
+#portfolio {
     top: 40px;
     z-index: 7;
 }
@@ -301,9 +300,10 @@ img {
     box-shadow: var(--shadow);
 }
 
-#project-link {
+.portfolio-link {
+    display: flex;
+    justify-content: space-evenly;
     margin-top: 5px;
-    text-align: center;
 }
 
 #contact-links {
