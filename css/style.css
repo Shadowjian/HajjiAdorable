@@ -23,6 +23,10 @@ body {
     overflow-x: hidden;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 .nav-container {
     display: flex;
     width: 100%;
@@ -32,13 +36,11 @@ body {
     display: flex;
     position: fixed;
     width: 100%;
-    /* justify-content: center; */
     align-items: center;
     height: 40px;
     background-color: var(--bg-primary);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow);
     z-index: 100;
-    /* border: solid 5px white; */
 }
 
 #hajji {
@@ -56,25 +58,87 @@ body {
     color: white;
 }
 
-.container {
+.main-container {
     display: flex;
     justify-content: space-between  ;
-    /* width: 100vw; */
 }
 
 #showcase {
+    gap: 20px;
     text-align: center;
+    
     background-color: var(--highlight);
     opacity: 0.5;
     display: flex;
+    flex-direction: column;
     position: fixed;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /* max-width: 50%; */
     min-width: 50%;
-    z-index: -1;
-    /* border: solid 5px green; */
+}
+
+#showcase h4 {
+    font-size: 1.1rem;
+}
+
+#arrow {
+    position: relative;
+    top: 2px;
+    color: rgb(44, 3, 248);
+    font-size: large;
+}   
+
+#copy {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: xx-small;
+}
+
+.stacks {
+    position: absolute;
+    left: 40px;
+    font-size: 50px;
+    opacity: .5;
+    align-self: start;
+    
+}
+
+.stacks ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stacks li {
+    color: rgb(147, 132, 18);
+}
+
+.stacks li:nth-of-type(odd){
+    color: red;
+    animation-name: animate-stacks;
+    animation-duration: 6s;
+    animation-iteration-count: infinite ;
+    animation-direction:alternate-reverse;
+}
+.stacks li:nth-of-type(even){
+    color: red;
+    animation-name: animate-stacks;
+    animation-duration: 10s;
+    animation-iteration-count: infinite ;
+    animation-direction:alternate-reverse;
+}
+
+@keyframes animate-stacks {
+    from {
+        color: var(--highlight);
+        transform: rotate(-30deg);
+    }
+    to {
+        color: rgb(244, 238, 226);
+        transform: rotate(30deg);
+    }
 }
 
 #me {
@@ -133,9 +197,35 @@ body {
 }
 
 #contacts {
-    align-self: center;
+    /* align-self: center; */
     top: 40px;
     z-index: 8;
+}
+#contact-me {
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-me form {
+    display: flex;
+    /* align-self: center; */
+    width: 100%;
+    gap: 5px;
+    flex-direction: column;
+}
+
+#contact-me form :is(input, textarea, button) {
+    padding: 10px;
+    width: 100%;
+    font-size: .9rem;
+    opacity: .7;
+    border: solid 1px var(--bg-primary);
+    outline: none;
+    background-color: var(--highlight);
+    font-family: inherit;
+    
 }
 
 .skills-wrapper {
@@ -147,10 +237,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
-.skill-title-banner {
+.title-banner {
     display: flex;
     /* justify-content: center; */
     align-self: start;
@@ -163,7 +253,7 @@ body {
     z-index: -1;
 }
 
-.skill-banner {
+.content-banner {
     display: flex;
     justify-content: space-around;
     align-self: end;
@@ -180,6 +270,14 @@ body {
 #project-link {
     margin-top: 5px;
     text-align: center;
+}
+
+#contact-links {
+    font-size: x-large;
+}
+
+#contact-links a{
+    margin-right: 30px;
 }
 
 @media (max-width: 700px) {
@@ -238,10 +336,10 @@ body {
         align-items: center;
     }
 
-    .skill-title-banner{
+    .title-banner{
         align-self: center;
     }
-    .skill-banner {
+    .content-banner {
         align-self: center;
     }
     
