@@ -32,9 +32,9 @@ img {
 
 #strip {
     position: absolute;
-    width: 50px;
+    width: 45px;
     height: 300vh;
-    left: calc(100vw / 2 - 50px / 2);
+    right: calc(100vw / 2 - 45px / 2);
     top: 0;
     background-color: #fab005;
     opacity: .8;
@@ -42,7 +42,7 @@ img {
 }
 
 #strip-stacks {
-    left: calc(50px / 2 - 2rem / 2);
+    left: calc(45px / 2 - 2rem / 2);
     font-size: 2rem;
 }
 
