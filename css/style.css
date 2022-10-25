@@ -22,7 +22,9 @@
 body {
     font-size: 14px;
     font-family: 'Silkscreen', cursive;
-    background-color: var(--bg-primary);
+    /* background-image: url(/images/yellow.jpg); */
+    /* background-size: cover; */
+    background-color: var(--bg-primary); 
     /* overflow-x: hidden; */
 }
 
@@ -33,7 +35,7 @@ img {
 #strip {
     position: absolute;
     width: 45px;
-    height: 300vh;
+    height: 400vh;
     right: calc(100vw / 2 - 45px / 2);
     top: 0;
     background-color: #fab005;
@@ -74,6 +76,8 @@ img {
     gap: 20px;
     text-align: center;
     background-color: var(--highlight);
+    /* background-image: url(/images/yellowWall.jpg); */
+    background-size: cover;
     opacity: 0.7;
     display: flex;
     flex-direction: column;
