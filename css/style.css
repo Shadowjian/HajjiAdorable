@@ -22,8 +22,6 @@
 body {
     font-size: 14px;
     font-family: 'Silkscreen', cursive;
-    /* background-image: url(/images/yellow.jpg); */
-    /* background-size: cover; */
     background-color: var(--bg-primary); 
     /* overflow-x: hidden; */
 }
@@ -76,8 +74,6 @@ img {
     gap: 20px;
     text-align: center;
     background-color: var(--highlight);
-    /* background-image: url(/images/yellowWall.jpg); */
-    background-size: cover;
     opacity: 0.7;
     display: flex;
     flex-direction: column;
@@ -92,7 +88,6 @@ img {
 .skills-wrapper {
     margin-top: 80px;
     height: 200vh;
-    max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -159,10 +154,6 @@ img {
     flex-direction: column;
     gap: 20px;
 }
-
-/* .stacks li {
-    color: rgb(147, 132, 18);
-} */
 
 /* ANIMATE STACK ICONS */
 .stacks li:nth-of-type(odd){
@@ -283,7 +274,6 @@ img {
 #contact-me form {
     display: flex;
     /* align-self: center; */
-    width: 100%;
     gap: 5px;
     flex-direction: column;
 }
